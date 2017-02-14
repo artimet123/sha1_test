@@ -8,17 +8,32 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<package\>
+~Msle0~/\<files\>
 
 # Command Line History (newest to oldest):
-:wq
 :q!
 :q
+:wq
 :q1
+:set nu
+:11
 
 # Search String History (newest to oldest):
-? \<import\>
+? \<files\>
+? \<txt\>
+? \<thub\>
+? }
 ? \<package\>
+? \<ListDir\>
+? \<err\>
+? \<fi\>
+? \<d\>
+? \<continue\>
+? \<nil\>
+? \<serfile\>
+? \<userfile\>
+??hash
+? \<import\>
 
 # Expression History (newest to oldest):
 
@@ -28,112 +43,224 @@
 
 # Registers:
 "1	LINE	0
-		
+	    "path/filepath"
 "2	LINE	0
-	}
+	"regexp"
 "3	LINE	0
-		fmt.Println(files, err)
-"4	LINE	0
-			
-"5	LINE	0
-				panic(e
-"6	LINE	0
-	}
-"7	LINE	0
-		return nil
-"8	LINE	0
-		}
-"9	LINE	0
 	
+"4	LINE	0
+	"path/filepath"
+"5	LINE	0
+	{
+"6	LINE	0
+		
+"7	LINE	0
+	}
+"8	LINE	0
+		fmt.Println(files, err)
+"9	LINE	0
+			
 ""-	CHAR	0
-	(
+	¢
 
 # File marks:
-'0  44  1  ~/listfile.go
-'1  20  30  ~/listfile.go
-'2  8  26  ~/main.go
-'3  10  0  ~/main.go
-'4  1  11  ~/sha1.go
-'5  49  0  ~/listfile.go
-'6  1  0  ~/listfile.go
-'7  1  0  ~/listfile.go
+'0  45  18  ~/listfile.go
+'1  1  0  ~/test.txt
+'2  10  32  ~/main.go
+'3  11  1  ~/main.go
+'4  14  0  ~/sha1.go
+'5  16  1  ~/sha1.go
+'6  2  0  ~/listfile.go
+'7  26  26  ~/sha1.go
 '8  1  0  ~/listfile.go
-'9  2  0  ~/main.go
+'9  29  0  ~/sha1.go
 
 # Jumplist (newest first):
--'  44  1  ~/listfile.go
+-'  45  18  ~/listfile.go
+-'  47  20  ~/listfile.go
+-'  19  0  ~/listfile.go
 -'  1  0  ~/listfile.go
--'  20  30  ~/listfile.go
--'  30  24  ~/listfile.go
--'  47  1  ~/listfile.go
--'  41  59  ~/listfile.go
--'  37  46  ~/listfile.go
--'  39  2  ~/listfile.go
--'  36  2  ~/listfile.go
--'  34  60  ~/listfile.go
--'  8  26  ~/main.go
+-'  1  0  ~/test.txt
+-'  10  32  ~/main.go
 -'  1  0  ~/main.go
--'  10  0  ~/main.go
--'  1  11  ~/sha1.go
--'  49  0  ~/listfile.go
+-'  11  1  ~/main.go
+-'  14  0  ~/sha1.go
+-'  1  0  ~/sha1.go
+-'  16  1  ~/sha1.go
+-'  23  1  ~/sha1.go
+-'  29  0  ~/sha1.go
+-'  2  0  ~/listfile.go
+-'  26  26  ~/sha1.go
+-'  15  17  ~/sha1.go
+-'  10  19  ~/sha1.go
+-'  23  1  ~/listfile.go
+-'  39  0  ~/listfile.go
+-'  32  0  ~/listfile.go
+-'  43  14  ~/listfile.go
+-'  8  12  ~/listfile.go
+-'  14  12  ~/listfile.go
+-'  18  0  ~/listfile.go
+-'  12  0  ~/listfile.go
+-'  28  19  ~/sha1.go
+-'  22  3  ~/sha1.go
+-'  11  0  ~/sha1.go
+-'  37  0  ~/sha1.go
+-'  21  4  ~/sha1.go
+-'  18  0  ~/sha1.go
+-'  3  7  ~/sha1.go
+-'  8  0  ~/sha1.go
+-'  31  2  ~/sha1.go
+-'  27  2  ~/sha1.go
+-'  25  9  ~/sha1.go
+-'  32  1  ~/sha1.go
+-'  33  0  ~/sha1.go
+-'  30  8  ~/sha1.go
+-'  44  11  ~/listfile.go
+-'  25  11  ~/listfile.go
+-'  34  1  ~/sha1.go
+-'  9  0  ~/main.go
+-'  38  44  ~/listfile.go
+-'  1  0  ~/.ssh/id_rsa.pub
+-'  46  1  ~/listfile.go
+-'  21  30  ~/listfile.go
+-'  31  24  ~/listfile.go
+-'  49  1  ~/listfile.go
+-'  41  2  ~/listfile.go
+-'  37  2  ~/listfile.go
+-'  35  60  ~/listfile.go
+-'  13  0  ~/main.go
+-'  51  0  ~/listfile.go
 -'  2  0  ~/main.go
 -'  7  0  ~/main.go
 -'  11  0  ~/listfile.go
--'  14  0  ~/listfile.go
 -'  3  0  ~/main.go
--'  1  11  ~/sha1.go
--'  8  26  ~/main.go
+-'  52  0  ~/listfile.go
+-'  1  0  ~/.ssh/id_rsa.pub
+-'  1  0  ~/.ssh/id_rsa.pub
+-'  1  0  ~/.ssh/id_rsa.pub
+-'  40  44  ~/listfile.go
+-'  1  0  ~/.ssh/id_rsa.pub
+-'  22  30  ~/listfile.go
+-'  50  1  ~/listfile.go
+-'  42  2  ~/listfile.go
+-'  36  60  ~/listfile.go
+-'  1  0  ~/.ssh/id_rsa.pub
+-'  1  0  ~/.ssh/id_rsa.pub
+-'  48  0  ~/listfile.go
+-'  14  0  ~/sha1.go
+-'  1  0  ~/sha1.go
+-'  16  1  ~/sha1.go
+-'  23  1  ~/sha1.go
+-'  29  0  ~/sha1.go
+-'  14  0  ~/sha1.go
+-'  1  0  ~/sha1.go
+-'  16  1  ~/sha1.go
+-'  23  1  ~/sha1.go
+-'  29  0  ~/sha1.go
+-'  26  26  ~/sha1.go
+-'  15  17  ~/sha1.go
+-'  10  32  ~/main.go
 -'  1  0  ~/main.go
--'  10  0  ~/main.go
--'  1  11  ~/sha1.go
--'  50  0  ~/listfile.go
--'  2  0  ~/main.go
--'  7  0  ~/main.go
--'  8  26  ~/main.go
--'  1  0  ~/main.go
--'  10  0  ~/main.go
--'  1  11  ~/sha1.go
--'  2  0  ~/main.go
--'  7  0  ~/main.go
--'  3  0  ~/main.go
--'  1  11  ~/sha1.go
--'  8  26  ~/main.go
--'  1  0  ~/main.go
--'  10  0  ~/main.go
--'  1  11  ~/sha1.go
--'  2  0  ~/main.go
--'  7  0  ~/main.go
 
 # History of marks within files (newest to oldest):
 
 > ~/listfile.go
-	"	44	1
-	^	20	31
-	.	20	30
+	"	45	18
+	^	44	4
+	.	44	3
 	+	1	10
 	+	9	1
-	+	49	0
-	+	30	1
-	+	32	2
-	+	34	1
-	+	35	2
-	+	37	45
-	+	20	30
+	+	53	0
+	+	31	1
+	+	33	2
+	+	35	1
+	+	36	2
+	+	38	45
+	+	21	30
+	+	1	1
+	+	38	49
+	+	40	0
+	+	38	43
+	+	8	0
+	+	47	11
+	+	17	19
+	+	14	12
+	+	20	7
+	+	8	9
+	+	9	7
+	+	47	14
+	+	38	8
+	+	37	3
+	+	38	3
+	+	39	3
+	+	9	0
+	+	45	30
+	+	47	50
+	+	11	42
+	+	47	61
+	+	50	3
+	+	46	24
+	+	47	0
+	+	50	0
+	+	49	2
+	+	46	76
+	+	1	5
+	+	26	2
+	+	43	14
+	+	44	3
+
+> ~/test.txt
+	"	1	0
 
 > ~/main.go
-	"	8	26
-	^	8	27
-	.	8	26
-	+	8	69
-	+	11	0
-	+	9	11
+	"	10	32
+	^	10	28
+	.	10	27
+	+	10	69
+	+	16	0
+	+	15	11
+	+	15	0
+	+	10	26
+	+	9	0
 	+	10	0
-	+	8	26
+	+	15	0
+	+	12	28
+	+	13	8
+	+	14	1
+	+	10	27
 
 > ~/sha1.go
-	"	1	11
-	^	31	3
-	.	31	2
+	"	14	0
+	^	22	12
+	.	26	10
+	+	31	3
+	+	32	0
+	+	30	2
+	+	10	47
 	+	32	3
+	+	33	1
+	+	34	0
+	+	32	1
 	+	33	0
-	+	31	2
+	+	24	33
+	+	36	10
+	+	10	43
+	+	36	15
+	+	33	0
+	+	32	1
+	+	31	1
+	+	8	0
+	+	3	6
+	+	10	26
+	+	28	19
+	+	10	47
+	+	6	0
+	+	15	11
+	+	22	11
+	+	26	10
+
+> /usr/share/vim/vim74/doc/help.txt
+	"	1	0
+
+> ~/.ssh/id_rsa.pub
+	"	1	0

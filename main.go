@@ -5,6 +5,11 @@ import (
 )
 
 func main() {
-	 err := ListDir("/home/cos", "seq?"".txt")
-	return err
+	 HOME:= os.Getenv("HOME")
+	fmt.Println(HOME)
+	 err := ListDir("/home/cos/",".txt")
+	if err != nil {
+		fmt.Printf("error:%v",err)
+		return
+	}
 }

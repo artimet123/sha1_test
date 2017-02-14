@@ -3,36 +3,27 @@ package main
 import (
     "os"
     "fmt"
-    "path/filepath"
     "crypto/sha1"
     "io"
 )
 
-func hashFile(path string) (hashName string,error) {
+func hashFile(path string) (hashName string,err error) {
 	file, err := os.Open(path)
 	h := sha1.New()
 
 	if err != nil {
-		return err
+		return "",err
 	}
 
 	defer file.Close()
 
-	data := make([]byte, 1024)
-	for{
-		n, err := file.Read(data){
-		if n != 0 {
-			io.WriteString(h, string(data)) 
-		} else {
-			break
-		}
-
-		if err != nil && err != io.EOF {
-		 panic(err)
-		}
+	_,err = io.Copy(h,file)
+	if err != nil {
+		return "",err
 	}
 
-	hashName := fmt.Sprintf("%x", h.Sum(nil))
+
+	hashName = fmt.Sprintf("%x", h.Sum(nil))
 	fmt.Println(path)
-	return nil 
+	return hashName,nil
 }
