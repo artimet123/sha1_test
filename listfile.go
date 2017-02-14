@@ -4,9 +4,7 @@ import (
 "fmt"
 "io/ioutil"
 "os"
-"strings"
-"runtime"
-"path"
+"regexp"
 )
 
 func ListDir(dirPth string, suffix string)(err error) {
@@ -33,23 +31,16 @@ func ListDir(dirPth string, suffix string)(err error) {
 		if fi.IsDir() {
 			continue
 		}
-		fmt.Printf("mao1111-%s",fi.Name())
-	_, fulleFilename, line, _ := runtime.Caller(0)
-	fmt.Println(fulleFilename)
-	fmt.Println(line)
-	var filenameWithSuffix string
-	filenameWithSuffix = path.Base(fulleFilename)
-    	fmt.Println("filenameWithSuffix=", filenameWithSuffix)
-    	var fileSuffix string
-    	fileSuffix = path.Ext(filenameWithSuffix)
-    	fmt.Println("fileSuffix=", fileSuffix)
-     
-    var filenameOnly string
-    filenameOnly = strings.TrimSuffix(filenameWithSuffix, fileSuffix)
-    fmt.Println("filenameOnly=", filenameOnly)
-		if strings.EqualFold(fileSuffix, suffix){
+		if m, _ := regexp.MatchString(".*txt", fi.Name()); m {
 			continue
 		}
+		//var reg = regexp.MustCompile(`.*txt`)
+		//var fileSuffix string
+		//fmt.Printf("%q\n", reg.FindAllString(fi.Name(), -1))
+		//_,err := reg.FindAllString(fi.Name(), -1)
+		//if strings.EqualFold(fileSuffix, suffix){
+		//	continue
+		//}
 
 		//if reg := regexp.MustCompile(`(?i:^hello)`){
 		//	continue
