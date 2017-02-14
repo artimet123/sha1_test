@@ -21,6 +21,7 @@ func hashFile(path string) (hashName string,err error) {
 	if err != nil {
 		return "",err
 	}
+		fmt.Printf("maossssss-%s\n",path)
 
 
 	hashName = fmt.Sprintf("%x", h.Sum(nil))
